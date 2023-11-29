@@ -1,0 +1,5 @@
+[workspace]
+members = [
+	"./crates/compiler/pseudolangc",
+	"./crates/pseudo-linter"
+]

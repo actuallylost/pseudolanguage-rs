@@ -1,0 +1,5 @@
+ΠΡΟΓΡΑΜΜΑ HelloWorld
+ΑΡΧΗ
+    ! This prints "Hello world!" to the screen.
+    ΓΡΑΨΕ "Hello world!"
+ΤΕΛΟΣ_ΠΡΟΓΡΑΜΜΑΤΟΣ

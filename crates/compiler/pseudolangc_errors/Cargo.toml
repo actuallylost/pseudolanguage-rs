@@ -1,0 +1,8 @@
+[package]
+name = "pseudolangc_errors"
+version = "0.1.0"
+authors = ["Losteey <pandagaminggr@gmail.com>"]
+
+[dependencies]
+
+pseudolangc_main = { path = "../pseudolangc_main" }
