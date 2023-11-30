@@ -3,3 +3,4 @@ members = [
 	"./crates/compiler/pseudolangc",
 	"./crates/pseudo-linter"
 ]
+resolver = "2"
