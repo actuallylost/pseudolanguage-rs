@@ -4,6 +4,13 @@ TODO - What is flux
 
 ## Basics
 
+Pseudolanguage suppports the following basic types:
+
+- `ΑΚΕΡΑΙΕΣ` - 64-bit signed integer
+- `ΠΡΑΓΜΑΤΙΚΕΣ` - 64-bit floating point number
+- `ΧΑΡΑΚΤΗΡΕΣ` - 8-bit character
+- `ΛΟΓΙΚΕΣ` - boolean
+
 TODO - variable types
 
 ## Control Flow
