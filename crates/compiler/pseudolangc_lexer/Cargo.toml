@@ -4,5 +4,9 @@ version = "0.1.0"
 authors = ["Losteey <pandagaminggr@gmail.com>"]
 
 [dependencies]
+logos = "0.13"
 
-pseudolangc_main = { path = "../pseudolangc_main" }
+pseudolangc_errors = { path = "../pseudolangc_errors" }
+
+[dev-dependencies]
+pretty_assertions = "1"

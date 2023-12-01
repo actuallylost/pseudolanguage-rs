@@ -4,5 +4,6 @@ version = "0.1.0"
 authors = ["Losteey <pandagaminggr@gmail.com>"]
 
 [dependencies]
+thiserror = "1"
 
-pseudolangc_main = { path = "../pseudolangc_main" }
+pseudolangc_types = { path = "../pseudolangc_types" }

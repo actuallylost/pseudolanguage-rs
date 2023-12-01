@@ -4,5 +4,8 @@ version = "0.1.0"
 authors = ["Losteey <pandagaminggr@gmail.com>"]
 
 [dependencies]
+log = "0.4"
 
-pseudolangc_main = { path = "../pseudolangc_main" }
+pseudolangc_lexer = { path = "../pseudolangc_lexer" }
+pseudolangc_parser = { path = "../pseudolangc_parser" }
+pseudolangc_codegen = { path = "../pseudolangc_codegen" }

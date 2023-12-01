@@ -4,5 +4,8 @@ version = "0.1.0"
 authors = ["Losteey <pandagaminggr@gmail.com>"]
 
 [dependencies]
+chumsky = "0.9"
+pretty_assertions = "1"
 
-pseudolangc_main = { path = "../pseudolangc_main" }
+pseudolangc_ast = { path = "../pseudolangc_ast" }
+pseudolangc_lexer = { path = "../pseudolangc_lexer" }
