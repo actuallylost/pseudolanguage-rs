@@ -13,57 +13,60 @@ pub enum Token {
     #[regex("[A-Za-zΑ-Ωα-ωͰ-Ͽ][A-Za-zΑ-Ωα-ωͰ-Ͽ0-9]*", |lex| lex.slice().to_string())]
     Identifier(String),
 
+    #[token("\n")]
+    TokenNewLine,
+
     #[token("<-")]
     TokenAssign,
-    
+
     #[token("+")]
     TokenPlus,
-    
+
     #[token("-")]
     TokenMinus,
-    
+
     #[token("*")]
     TokenMultiply,
-    
+
     #[token("/")]
     TokenDivide,
-    
+
     #[token("^")]
     TokenRaise,
-    
+
     #[token("<")]
     TokenLessThan,
 
     #[token("<=")]
     TokenLessEq,
-    
+
     #[token("=")]
     TokenEq,
 
     #[token("<>")]
     TokenNotEq,
-    
+
     #[token(">=")]
     TokenMoreEq,
-    
+
     #[token(">")]
     TokenMoreThan,
-    
+
     #[token("(")]
     TokenParenthLeft,
-    
+
     #[token(")")]
     TokenParenthRight,
-    
+
     #[token("[")]
     TokenBracketLeft,
-    
+
     #[token("]")]
     TokenBracketRight,
-    
+
     #[token(",")]
     TokenComma,
-    
+
     #[token(".")]
     TokenDot,
 
@@ -75,140 +78,140 @@ pub enum Token {
 
     #[token("..")]
     TokenRange,
-    
+
     // Keywords - General
     #[token("ΔΙΑΒΑΣΕ")]
     KeywordRead,
-    
+
     #[token("ΓΡΑΨΕ")]
     KeywordWrite,
-    
+
     #[token("ΕΚΤΥΠΩΣΕ")]
     KeywordPrint,
-    
+
     /// Operands
     #[token("DIV")]
     KeywordDiv,
-    
+
     #[token("MOD")]
     KeywordMod,
-    
+
     #[token("ΚΑΙ")]
     KeywordAnd,
-    
+
     #[token("Η")]
     KeywordOr,
-    
+
     #[token("ΟΧΙ")]
     KeywordNot,
-    
+
     #[token("ΑΛΗΘΕΣ")]
     KeywordTrue,
-    
+
     #[token("ΨΕΥΔΕΣ")]
     KeywordFalse,
-    
+
     /// Control flow
     #[token("ΑΝ")]
     KeywordIf,
-    
+
     #[token("ΤΟΤΕ")]
     KeywordThen,
-    
+
     #[token("ΑΛΛΙΩΣ_ΑΝ")]
     KeywordElseIf,
-    
+
     #[token("ΑΛΛΙΩΣ")]
     KeywordElse,
-    
+
     #[token("ΤΕΛΟΣ_ΑΝ")]
     KeywordEndIf,
-    
+
     /// Loops
     #[token("ΓΙΑ")]
     KeywordFor,
-    
+
     #[token("ΑΠΟ")]
     KeywordFrom,
-    
+
     #[token("ΜΕΧΡΙ")]
     KeywordUpTo,
-    
+
     #[token("ΜΕ_ΒΗΜΑ")]
     KeywordWithStep,
-    
+
     #[token("ΟΣΟ")]
     KeywordWhile,
-    
+
     #[token("ΕΠΑΝΑΛΑΒΕ")]
     KeywordRepeat,
-    
+
     #[token("ΑΡΧΗ_ΕΠΑΝΑΛΗΨΗΣ")]
     KeywordBeginLoop,
-    
+
     #[token("ΜΕΧΡΙΣ_ΟΤΟΥ")]
     KeywordUntil,
-    
+
     #[token("ΕΠΙΛΕΞΕ")]
     KeywordChoose,
-    
+
     #[token("ΠΕΡΙΠΤΩΣΗ")]
     KeywordCase,
 
     #[token("ΤΕΛΟΣ_ΕΠΙΛΟΓΩΝ")]
     KeywordEndChoose,
-    
+
     // Keywords - Program
     #[token("ΠΡΟΓΡΑΜΜΑ")]
     KeywordProgram,
-    
+
     #[token("ΤΕΛΟΣ_ΠΡΟΓΡΑΜΜΑΤΟΣ")]
     KeywordEndProgram,
-    
+
     #[token("ΑΡΧΗ")]
     KeywordBegin,
-    
+
     #[token("ΣΤΑΘΕΡΕΣ")]
     KeywordConstants,
-    
+
     #[token("ΜΕΤΑΒΛΗΤΕΣ")]
     KeywordVariables,
-    
+
     #[token("ΑΚΕΡΑΙΕΣ")]
     KeywordProgInt,
-    
+
     #[token("ΠΡΑΓΜΑΤΙΚΕΣ")]
     KeywordProgReal,
-    
+
     #[token("ΧΑΡΑΚΤΗΡΕΣ")]
     KeywordProgChar,
 
     #[token("ΛΟΓΙΚΕΣ")]
     KeywordProgBool,
-    
+
     // Keywords - Function
     #[token("ΣΥΝΑΡΤΗΣΗ")]
     KeywordFunction,
 
     #[token("ΑΚΕΡΑΙΑ")]
     KeywordInt,
-    
+
     #[token("ΠΡΑΓΜΑΤΙΚΗ")]
     KeywordReal,
-    
+
     #[token("ΧΑΡΑΚΤΗΡΑΣ")]
     KeywordChar,
-    
+
     #[token("ΛΟΓΙΚΗ")]
     KeywordBool,
-    
+
     #[token("ΤΕΛΟΣ_ΣΥΝΑΡΤΗΣΗΣ")]
     KeywordEndFunction,
-    
+
     // Keywords - Procedure
     #[token("ΔΙΑΔΙΚΑΣΙΑ")]
     KeywordProcedure,
-    
+
     #[token("ΚΑΛΕΣΕ")]
     KeywordCall,
 
@@ -218,6 +221,9 @@ pub enum Token {
     // Keywords - Algorithm
     #[token("ΑΛΓΟΡΙΘΜΟΣ")]
     KeywordAlgorithm,
+
+    #[token("ΤΕΛΟΣ_ΑΛΓΟΡΙΘΜΟΥ")]
+    KeywordEndAlgorithm,
 }
 
 impl Display for Token {
@@ -226,17 +232,18 @@ impl Display for Token {
             f,
             "{}",
             match self {
-                Token::Error=>"unexpected token",
-                Token::Identifier(_)=>"identifier",
-                Token::TokenAssign=>"<-",
-                Token::TokenPlus=>"+",
-                Token::TokenMinus=>"-",
-                Token::TokenMultiply=>"*",
-                Token::TokenDivide=>"/",
+                Token::Error => "unexpected token",
+                Token::Identifier(_) => "identifier",
+                Token::TokenNewLine => "\n",
+                Token::TokenAssign => "<-",
+                Token::TokenPlus => "+",
+                Token::TokenMinus => "-",
+                Token::TokenMultiply => "*",
+                Token::TokenDivide => "/",
                 Token::TokenRaise => "^",
                 Token::TokenLessThan => "<",
                 Token::TokenLessEq => "<=",
-                Token::TokenEq=>"=",
+                Token::TokenEq => "=",
                 Token::TokenNotEq => "<>",
                 Token::TokenMoreEq => ">=",
                 Token::TokenMoreThan => ">",
@@ -285,15 +292,16 @@ impl Display for Token {
                 Token::KeywordProgChar => "ΧΑΡΑΚΤΗΡΕΣ",
                 Token::KeywordProgBool => "ΛΟΓΙΚΕΣ",
                 Token::KeywordFunction => "ΣΥΝΑΡΤΗΣΗ",
-                Token::KeywordInt => "",
-                Token::KeywordReal => "",
-                Token::KeywordChar => "",
-                Token::KeywordBool => "",
-                Token::KeywordEndFunction => "",
+                Token::KeywordInt => "ΑΚΕΡΑΙΑ",
+                Token::KeywordReal => "ΠΡΑΓΜΑΤΙΚΗ",
+                Token::KeywordChar => "ΧΑΡΑΚΤΗΡΑΣ",
+                Token::KeywordBool => "ΛΟΓΙΚΗ",
+                Token::KeywordEndFunction => "ΤΕΛΟΣ_ΣΥΝΑΡΤΗΣΗΣ",
                 Token::KeywordProcedure => "ΔΙΑΔΙΚΑΣΙΑ",
                 Token::KeywordCall => "ΚΑΛΕΣΕ",
-                Token::KeywordEndProcedure => "",
-                Token::KeywordAlgorithm => "ΑΛΓΟΡΙΘΜΟΣ", 
+                Token::KeywordEndProcedure => "ΤΕΛΟΣ_ΔΙΑΔΙΚΑΣΙΑΣ",
+                Token::KeywordAlgorithm => "ΑΛΓΟΡΙΘΜΟΣ",
+                Token::KeywordEndAlgorithm => "ΤΕΛΟΣ_ΑΛΓΟΡΙΘΜΟΥ",
             }
         )
     }
