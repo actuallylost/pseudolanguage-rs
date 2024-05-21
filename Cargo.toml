@@ -1,6 +1,6 @@
 [workspace]
 members = [
-	"./crates/compiler/pseudolangc",
-	"./crates/pseudo-linter"
+	"./crates/compiler/*",
+	"./crates/pseudolang-support"
 ]
 resolver = "2"
