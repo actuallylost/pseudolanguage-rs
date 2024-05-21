@@ -138,7 +138,7 @@ pub enum Token {
     KeywordUpTo,
 
     #[token("ΜΕ_ΒΗΜΑ")]
-    KeywordWithStep,
+    KeywordStep,
 
     #[token("ΟΣΟ")]
     KeywordWhile,
@@ -147,7 +147,7 @@ pub enum Token {
     KeywordRepeat,
 
     #[token("ΑΡΧΗ_ΕΠΑΝΑΛΗΨΗΣ")]
-    KeywordBeginLoop,
+    KeywordLoop,
 
     #[token("ΜΕΧΡΙΣ_ΟΤΟΥ")]
     KeywordUntil,
@@ -274,10 +274,10 @@ impl Display for Token {
                 Token::KeywordFor => "ΓΙΑ",
                 Token::KeywordFrom => "ΑΠΟ",
                 Token::KeywordUpTo => "ΜΕΧΡΙ",
-                Token::KeywordWithStep => "ΜΕ_ΒΗΜΑ",
+                Token::KeywordStep => "ΜΕ_ΒΗΜΑ",
                 Token::KeywordWhile => "ΟΣΟ",
                 Token::KeywordRepeat => "ΕΠΑΝΑΛΑΒΕ",
-                Token::KeywordBeginLoop => "ΑΡΧΗ_ΕΠΑΝΑΛΗΨΗΣ",
+                Token::KeywordLoop => "ΑΡΧΗ_ΕΠΑΝΑΛΗΨΗΣ",
                 Token::KeywordUntil => "ΜΕΧΡΙΣ_ΟΤΟΥ",
                 Token::KeywordChoose => "ΕΠΙΛΕΞΕ",
                 Token::KeywordCase => "ΠΕΡΙΠΤΩΣΗ",
