@@ -1,13 +1,13 @@
 [package]
-name = "pseudolangc_parser"
+name = "_parser"
 version = "0.1.0"
 authors = ["Losteey <pandagaminggr@gmail.com>"]
 
 [dependencies]
 lalrpop-util = "0.20.2"
 
-pseudolangc_ast = { path = "../pseudolangc_ast" }
-pseudolangc_lexer = { path = "../pseudolangc_lexer" }
+pseudolang_ast = { path = "../pseudolang_ast" }
+pseudolang_lexer = { path = "../pseudolang_lexer" }
 
 [build-dependencies]
 lalrpop = { version = "0.20.2", default-features = false }

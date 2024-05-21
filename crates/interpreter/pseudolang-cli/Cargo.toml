@@ -1,11 +1,9 @@
 [package]
-name = "pseudolangc"
+name = "pseudolang-cli"
 version = "0.1.0"
 authors = ["Losteey <pandagaminggr@gmail.com>"]
 
 [dependencies]
 clap = { version = "4", features = ["derive"] }
-env_logger = "0.10"
+env_logger = "0.11"
 log = "0.4"
-
-pseudolangc_main = { path = "../pseudolangc_main" }

@@ -1,12 +1,12 @@
 [package]
-name = "pseudolangc_lexer"
+name = "pseudolang_lexer"
 version = "0.1.0"
 authors = ["Losteey <pandagaminggr@gmail.com>"]
 
 [dependencies]
-logos = "0.14"
+logos = "0.13"
 
-pseudolangc_errors = { path = "../pseudolangc_errors" }
+pseudolang_errors = { path = "../pseudolang_errors" }
 
 [dev-dependencies]
 pretty_assertions = "1"

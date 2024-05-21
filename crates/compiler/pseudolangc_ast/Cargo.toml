@@ -1,9 +1,0 @@
-[package]
-name = "pseudolangc_ast"
-version = "0.1.0"
-authors = ["Losteey <pandagaminggr@gmail.com>"]
-
-[dependencies]
-thiserror = "1"
-
-pseudolangc_types = { path = "../pseudolangc_types" }

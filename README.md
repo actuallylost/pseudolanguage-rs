@@ -4,7 +4,7 @@ Welcome to the repository of the Pseudolanguage project. This entire project is 
 
 ## Purpose
 
-This is a project meant to create an platform-independent compiler for the pseudolanguage programming language, used by Greek high school students to learn programming.
+This is a project meant to create an platform-independent interpreter for the pseudolanguage programming language, used by Greek high-school students to learn programming.
 
 ## Contribute
 
