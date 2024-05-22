@@ -7,7 +7,7 @@ edition = "2021"
 [dependencies]
 lalrpop-util = { version = "0.20.2", features = ["lexer", "unicode"]}
 
-pseudolang_ast = { path = "../pseudolang-ast" }
+pseudolang-ast = { path = "../pseudolang-ast" }
 
 [build-dependencies]
 lalrpop = "0.20.2"

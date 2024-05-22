@@ -7,4 +7,4 @@ edition = "2021"
 [dependencies]
 thiserror = "1"
 
-pseudolang_types = { path = "../pseudolang-types" }
+pseudolang-types = { path = "../pseudolang-types" }
