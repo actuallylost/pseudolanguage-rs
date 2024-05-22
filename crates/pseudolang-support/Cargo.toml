@@ -1,6 +1,7 @@
 [package]
 name = "pseudolang-support"
 version = "0.1.0"
+authors = ["Losteey <pandagaminggr@gmail.com>"]
 edition = "2021"
 
 [dependencies]
