@@ -1,7 +1,8 @@
 [package]
-name = "pseudolang_errors"
+name = "pseudolang-types"
 version = "0.1.0"
 authors = ["Losteey <pandagaminggr@gmail.com>"]
+edition = "2021"
 
 [dependencies]
-thiserror = "1"
+pretty_assertions = "1"
