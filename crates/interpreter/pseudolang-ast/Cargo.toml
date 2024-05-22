@@ -1,0 +1,10 @@
+[package]
+name = "pseudolang-ast"
+version = "0.1.0"
+authors = ["Losteey <pandagaminggr@gmail.com>"]
+edition = "2021"
+
+[dependencies]
+thiserror = "1"
+
+pseudolang_types = { path = "../pseudolang-types" }
