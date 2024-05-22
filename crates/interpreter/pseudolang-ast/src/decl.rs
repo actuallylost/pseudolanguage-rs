@@ -1,8 +1,8 @@
-use pseudolang_types::Primitive;
+use pseudolang_types::Type;
 
 pub struct TypedDecl {
     ident: String,
-    ty: Primitive,
+    ty: Type,
     mutable: bool,
 }
 

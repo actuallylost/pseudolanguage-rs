@@ -1,5 +1,5 @@
 #[derive(Debug)]
-pub enum Primitive {
+pub enum Type {
     Int,
     Real,
     Bool,
