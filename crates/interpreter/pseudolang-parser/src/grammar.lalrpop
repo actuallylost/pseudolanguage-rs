@@ -1,3 +1,71 @@
 use std::str::FromStr;
+use pseudolang_ast::program::Program;
+use pseudolang_ast::decl::{Decl, DeclKey, TypedDecl};
+use pseudolang_ast::literal::Literal;
+
+use pseudolang_types::Type;
 
 grammar;
+
+pub Program: Program = {
+    "PROGRAM" Ident ":" Decl+ => Program {
+        name: Ident,
+        decls: Decl,
+    },
+    Decl,
+};
+
+pub Decl: Decl = {
+    Constants,
+    Variables,
+};
+
+pub Constants: Vec<TypedDecl> = {
+    "CONSTANTS" ":" Ident "=" Lit => TypedDecl {
+        name: Ident,
+        ty: Type,
+        mutable: false,
+    },
+    Variables,
+};
+
+pub Variables: Vec<TypedDecl> = {
+    "VARIABLES" ":" <t:VarType> ":" <ids:Idents> => ids.iter().map(|name| TypedDecl {
+        name: name,
+        ty: t,
+        mutable: true,
+    }).collect(),
+    Begin,
+};
+
+VarType: Type = {
+    "INT" => Type::Int,
+    "REAL" => Type::Real,
+    "BOOLEAN" => Type::Bool,
+    "CHAR" => Type::Char,
+    "STRING" => Type::String,
+};
+
+Begin: String = {
+    "BEGIN" => <>.to_owned()
+};
+
+End: String = {
+    "END" => <>.to_owned()
+};
+
+pub Idents = Args<Ident>;
+
+Args<T>: Vec<T> = {
+    <mut v:(<T> ",")*> <e:T?> => match e {
+        Some(e) => {
+            v.push(e);
+            v
+        }
+        None => v,
+    }
+};
+
+Ident: String = {
+    r"[A-Za-z][A-Za-z0-9_]*" => <>.to_owned()
+};

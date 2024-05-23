@@ -7,6 +7,11 @@ pub struct TypedDecl {
 }
 
 pub struct Decl {
-    constants: Vec<TypedDecl>,
+    constants: Option<Vec<TypedDecl>>,
     variables: Vec<TypedDecl>,
+}
+
+pub enum DeclKey {
+    Const,
+    Var,
 }
