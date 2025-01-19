@@ -5,4 +5,4 @@ authors = ["Losteey <pandagaminggr@gmail.com>"]
 edition = "2021"
 
 [dependencies]
-thiserror = "1"
+thiserror = "2"
