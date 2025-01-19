@@ -1,10 +1,10 @@
 # Pseudolanguage Documentation
 
-TODO - What is flux
+Pseudolanguage is a simple programming language designed for educational purposes. It is a statically typed language like the one used in Greek high schools.
 
 ## Basics
 
-Pseudolanguage suppports the following basic types:
+Pseudolanguage supports the following basic types:
 
 - `ΑΚΕΡΑΙΕΣ` - 64-bit signed integer
 - `ΠΡΑΓΜΑΤΙΚΕΣ` - 64-bit floating point number
