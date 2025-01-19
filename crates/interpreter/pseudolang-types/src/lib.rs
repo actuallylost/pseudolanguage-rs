@@ -1,8 +1,8 @@
 #[derive(Debug)]
 pub enum Type {
-    Int,
-    Real,
-    Bool,
-    Char,
-    String,
+    Int(i64),
+    Real(f64),
+    Bool(bool),
+    Char(char),
+    String(String),
 }
