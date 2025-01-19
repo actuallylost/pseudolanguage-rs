@@ -765,7 +765,7 @@ name = "pseudolang-ast"
 version = "0.1.0"
 dependencies = [
  "pseudolang-types",
- "thiserror 1.0.55",
+ "thiserror 2.0.11",
 ]
 
 [[package]]
