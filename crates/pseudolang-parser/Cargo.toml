@@ -1,0 +1,13 @@
+[package]
+name = "pseudolang-parser"
+version = "0.1.0"
+authors = ["actuallylost <code@lostcave.dev>"]
+edition = "2024"
+
+[dependencies]
+lalrpop-util = { version = "0.20.2", features = ["lexer", "unicode"] }
+
+pseudolang-ast = { path = "../pseudolang-ast" }
+
+[build-dependencies]
+lalrpop = "0.20.2"

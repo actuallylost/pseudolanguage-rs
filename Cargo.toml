@@ -1,6 +1,3 @@
 [workspace]
-members = [
-	"./crates/interpreter/*",
-	"./crates/pseudolang-support"
-]
-resolver = "2"
+members = ["./crates/interpreter/*", "./crates/pseudolang-support"]
+resolver = "3"

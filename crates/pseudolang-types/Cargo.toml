@@ -1,9 +1,8 @@
 [package]
-name = "pseudolang-support"
+name = "pseudolang-types"
 version = "0.1.0"
 authors = ["actuallylost <code@lostcave.dev>"]
 edition = "2024"
 
 [dependencies]
-tower-lsp = "0.20"
-tokio = { version = "1", features = ["full"] }
+pretty_assertions = "1"

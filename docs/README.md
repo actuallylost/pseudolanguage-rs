@@ -17,7 +17,7 @@ TODO - variable types
 
 Pseudolang supports `if` statements. Their syntax is as follows:
 
-```
+```psl
 ΑΝ condition ΤΟΤΕ
     ! If condition is true, run some code
 ΤΕΛΟΣ_ΑΝ
@@ -25,7 +25,7 @@ Pseudolang supports `if` statements. Their syntax is as follows:
 
 It also supports `else-if` and `else` clauses:
 
-```
+```psl
 ΑΝ condition ΤΟΤΕ
     ! If condition is true, run some code
 ΑΛΛΙΩΣ_ΑΝ otherCondition ΤΟΤΕ
@@ -37,7 +37,7 @@ It also supports `else-if` and `else` clauses:
 
 It also supports `switch` statements:
 
-```
+```psl
 ΕΠΙΛΕΞΕ variable
     ΠΕΡΙΠΤΩΣΗ value
         ! If variable is equal to value, run some code
